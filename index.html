@@ -10,8 +10,8 @@
     <body onload="init()" onresize="resize()">
         <h1 class="faketext">slider</h1>
         <div class="rot">
-            <button onclick="prev()" class="prvbtn" style="display: none;">
-                <<</button><buttononclick="next()"class="nxtbtn">>></button>
+            <button onclick="prev()" class="prvbtn" style="display: none;"> &lt; &lt; </button>
+            <button onclick="next()" class="nxtbtn">&gt; &gt;</button>
             <div class="slider">
                 <div class="flexing" id='sld'></div>
             </div>
@@ -39,11 +39,13 @@
     .card-body {
         padding: 10px;
     }
-    .card-body h2 {
+    .card-body h2
+    {
         font-size: 1.7em;
         font-weight: 500;
     }
-    .card-body p {
+    .card-body p
+    {
         font-size: 1em;
         font-weight: 300;
         padding-top: 10px;
@@ -62,11 +64,11 @@
     .flexing {
         display: flex;
     }
-    .prvbtn,
-    .nxtbtn {
-        background: rgba(0, 0, 0, 0.5);
+    .prvbtn,.nxtbtn
+    {
+        background: rgba(0,0,0,0.5);
         padding: 10px;
-        top: 25%;
+        top:25%;
         border: 0;
         outline: none;
         border-radius: 4px;
@@ -86,19 +88,23 @@
     .slider {
         transition: all 0.3s ease-in-out;
     }
-    .faketext {
+    .faketext
+    {
         font-size: 4em;
         text-transform: uppercase;
         opacity: 0.1;
     }
-    @media only screen and(max-width: 600px) {
-        .nxtbtn {
+    @media only screen and (max-width: 600px)
+    {
+        .nxtbtn
+        {
             left: 93%;
         }
 
-        .faketext {
-            font-size: 2em;
-        }
+    .faketext
+    {
+        font-size: 2em;
+    }
     }
 </style>
 
@@ -122,7 +128,7 @@
             desc: "A passionate React JS trainer with experience of more than 2 years as PHP trainer",
             img: "a.png"
         },
-
+        
         {
             name: "Prof. Adam",
             desc: "A passionate React JS trainer with experience of more than 3 years as MEAN stack trainer",
@@ -131,11 +137,12 @@
             name: "Prof. Smith",
             desc: "A passionate React JS trainer with experience of more than 4 years as MERN stack developer",
             img: "e.png"
-        }, {
+        },{
             name: "Prof. SRK",
             desc: "A passionate React JS trainer with experience of more than 2 years as HTML/CSS/SASS trainer",
             img: "c.png"
-        }, {
+        },
+        {
             name: "Prof. Adam",
             desc: "A passionate React JS trainer with experience of more than 3 years as MEAN stack trainer",
             img: "d.png"
@@ -173,14 +180,14 @@
     }
     const next = () => {
         i += 1;
-        if (i > 0) {
+        if(i>0)
+        {
             document.getElementsByClassName('prvbtn')[0].style = 'display:block'
         }
         if (i <= numbObj) 
             document.getElementsByClassName('slider')[0].style.transform = `translateX(-${
-             i * 370
-        }
-        px `;
+                i * 370
+            }px`;
          else 
             i = numbObj
         if(i===numbObj)
@@ -192,10 +199,9 @@
         i -= 1;
         document.getElementsByClassName('nxtbtn')[0].style='display:block'
         if (i >= 0) 
-            document.getElementsByClassName('slider')[0].style.transform = ` translateX(-$ {
-            i * 370
-        }
-        px `;
+            document.getElementsByClassName('slider')[0].style.transform = `translateX(-${
+                i * 370
+            }px`;
          else 
             i = 0;
         if(i===0)
@@ -203,4 +209,5 @@
             document.getElementsByClassName('prvbtn')[0].style = 'display:none'
         }
         
-    } </script>
+    }
+</script>

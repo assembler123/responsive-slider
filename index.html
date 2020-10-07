@@ -33,7 +33,7 @@
         display: flex;
         margin-left: 20px;
         border-radius: 10px;
-        min-width: 450px;
+        min-width: 350px;
     }
     .card-body {
         padding: 10px;
@@ -134,7 +134,7 @@
     ]
     let i = 0;
     const resize = () => {
-        numbObj = tobj - Math.floor(window.innerWidth / 470);
+        numbObj = tobj - Math.floor(window.innerWidth / 370);
 
     }
     const init = () => {
@@ -166,7 +166,7 @@
         }
         if (i <= numbObj) 
             document.getElementsByClassName('slider')[0].style.transform = `translateX(-${
-                i * 470
+                i * 370
             }px`;
          else 
             i = numbObj
@@ -180,7 +180,7 @@
         document.getElementsByClassName('nxtbtn')[0].style='display:block'
         if (i >= 0) 
             document.getElementsByClassName('slider')[0].style.transform = `translateX(-${
-                i * 470
+                i * 370
             }px`;
          else 
             i = 0;
